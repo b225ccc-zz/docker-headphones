@@ -1,18 +1,17 @@
-# docker-sickrage
+# docker-headphones
 
-[![Build Status](https://travis-ci.org/b225ccc/docker-sickrage.svg?branch=master)](https://travis-ci.org/b225ccc/docker-sickrage)
+[![Build Status](https://travis-ci.org/b225ccc/docker-headphones.svg?branch=master)](https://travis-ci.org/b225ccc/docker-headphones)
 
 
 Running:
 
 ~~~ sh
 docker run \
-  --name sickrage \
+  --name headphones \
   -v /etc/localtime:/etc/localtime:ro \
-  -v /data/services/sickrage/config:/config \
-  -v /data/services/sickrage/downloads:/downloads \ 
-  -v /data/tv:/tv \
-  -p 8081:8081 \
-  b225ccc/docker-sickrage:latest
+  -v /data/services/headphones/config:/config \
+  -v /data/services/headphones/downloads:/downloads \ 
+  -v /data/music:/music \
+  -p 8181:8181 \
+  b225ccc/docker-headphones:latest
 ~~~
-# docker-headphones
