@@ -15,7 +15,7 @@ before_script:
   - docker build -f Dockerfile -t $REPO:$COMMIT .
 
 script:
-  - docker run -d -p 127.0.0.1:8081:8081 --name headphones $REPO:$COMMIT
+  - docker run -d -p 127.0.0.1:8181:8181 --name headphones $REPO:$COMMIT
   - docker ps | grep -q headphones
 
 after_success:
