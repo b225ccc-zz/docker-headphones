@@ -36,8 +36,8 @@ RUN \
 
 # add custom files
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
-COPY run.sh /usr/local/bin/run.sh
-RUN chmod +x /usr/local/bin/run.sh
+COPY config_init.sh /usr/local/bin/config_init.sh
+RUN chmod +x /usr/local/bin/config_init.sh
 
 RUN \
   git clone -q https://github.com/rembo10/headphones.git /opt/headphones && \
@@ -49,4 +49,4 @@ VOLUME /config /downloads /music
 # ports
 EXPOSE 8181
 
-CMD ["/usr/local/bin/run.sh"]
+CMD ["/usr/bin/supervisord"]
