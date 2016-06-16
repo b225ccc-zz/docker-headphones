@@ -47,4 +47,4 @@ VOLUME /config /downloads /music
 # ports
 EXPOSE 8181
 
-CMD ["/usr/bin/supervisord"]
+CMD ["/usr/local/bin/run.sh"]
