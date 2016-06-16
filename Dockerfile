@@ -36,6 +36,8 @@ RUN \
 
 # add custom files
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+COPY run.sh /usr/local/bin/run.sh
+RUN chmod +x /usr/local/bin/run.sh
 
 RUN \
   git clone -q https://github.com/rembo10/headphones.git /opt/headphones && \
